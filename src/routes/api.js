@@ -10,8 +10,6 @@ router.get("/todos", (req, res, next) => {
 });
 
 router.post("/todos", (req, res, next) => {
-  console.log("Post api hit");
-  console.log(req.body.action);
   if (req.body.action) {
     Todo.create(req.body)
       .then((data) => res.json(data))

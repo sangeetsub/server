@@ -7,12 +7,13 @@
     "lint": "eslint ./",
     "test": "jest -i --verbose --coverage --runInBand",
     "start": "node index.js",
+    "start-watch": "nodemon index.js",
     "dboff": "killall mongod",
     "watch": "nodemon index.js",
     "dbon": "mkdir -p ./db && mongod --dbpath ./db"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sangeet Subedi",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -24,7 +25,9 @@
     "superagent": "^5.2.2"
   },
   "devDependencies": {
+    "concurrently": "^5.2.0",
     "eslint": "^7.1.0",
-    "jest": "^26.0.1"
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4"
   }
 }
